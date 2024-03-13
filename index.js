@@ -9,6 +9,7 @@ const app = express();
 
 app.use(body_parser.json());
 app.use(require("cors")());
+app.options('*', cors());
 
 
 app.use("/api", require("./authentication.js"));
